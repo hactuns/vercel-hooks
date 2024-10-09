@@ -1,6 +1,6 @@
 {
-  "name": "vercel-hooks",
-  "version": "1.0.0",
+  "name": "function-hooks",
+  "version": "0.0.3",
   "description": "Custom hooks for vercel/next serverless API",
   "keywords": [
     "vercel",
@@ -28,11 +28,16 @@
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "ci": "yarn check-format && yarn check-exports &&  yarn build"
   },
-  "packageManager": "^yarn@1.22.19",
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.0.0"
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
     "prettier": "^3.3.3",
-    "tsc": "^2.0.4",
     "typescript": "^5.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

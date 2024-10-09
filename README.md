@@ -1,3 +1,4 @@
-**tt-package-demo**
+**@vercel-hooks**
 
-A demo package for Total TypeScript.
+test
+A demo package for custom vercel hooks.
