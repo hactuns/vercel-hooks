@@ -1,6 +1,6 @@
 import { Collection, MongoClient } from 'mongodb';
 
-export class MongoDB {
+export class Mongo {
   private static client: MongoClient;
 
   static getClient() {
