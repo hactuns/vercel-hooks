@@ -8,7 +8,7 @@ export class Mongo {
       this.client = new MongoClient(String(process.env.MONGODB_URI));
     }
 
-    return this.client;
+    return this;
   }
 
   static async connect() {
