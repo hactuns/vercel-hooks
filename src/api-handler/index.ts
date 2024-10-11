@@ -1,13 +1,13 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-type APIHandler = (
+export type APIHandler = (
   req: VercelRequest,
   res: VercelResponse
 ) => Promise<VercelResponse> | VercelResponse;
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-const handler =
+export const handler =
   (callback: Partial<Record<HttpMethod, APIHandler>>) =>
   (req: VercelRequest, res: VercelResponse) => {
     const method = req.method?.toUpperCase() as HttpMethod;
