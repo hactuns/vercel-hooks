@@ -23,6 +23,13 @@
   "exports": {
     "./*": "./dist/*"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
+  },
   "main": "dist/index.js",
   "type": "module",
   "license": "MIT",
