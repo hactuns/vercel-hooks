@@ -39,3 +39,5 @@ export class Mongo {
     return this.getDB().collection<T>(collection);
   }
 }
+
+export default Mongo;

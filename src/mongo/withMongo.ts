@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb';
-import { Mongo } from './mongo.js';
+import { Mongo } from './mongoClient.js';
 
 export type ApiResponse<T = Response> = T | Response | undefined;
 export type ApiRequest<T = Request> = T | Request | undefined;
 
-const withMongo =
+export const withMongo =
   <REQ = ApiRequest, RES = ApiResponse>(
     callback: (
       req: ApiRequest | REQ,
