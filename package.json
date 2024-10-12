@@ -28,7 +28,7 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-    "ci": "yarn check-format && yarn check-exports &&  yarn build"
+    "ci": "yarn check-format && yarn check-exports && yarn build"
   },
   "engines": {
     "npm": "please-use-yarn",
