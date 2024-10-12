@@ -31,7 +31,7 @@ export type HandlerFunction<
 > = Record<Key, RequestContext<Req, Res>>;
 
 type HandlerCallback<RC extends Record<string, RequestContext>> = {
-  [Method in keyof RC]: APIHandler<RC[Method], object>;
+  [Method in keyof RC]?: APIHandler<RC[Method], object>;
 };
 
 export const handler =
