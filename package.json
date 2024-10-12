@@ -1,6 +1,6 @@
 {
   "name": "function-hooks",
-  "version": "1.2.8",
+  "version": "1.2.51",
   "description": "Custom hooks for vercel/next serverless API",
   "keywords": [
     "vercel",
