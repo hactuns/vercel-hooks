@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "mongodb": "^6.9.0",
+    "winston": "^3.15.0",
+    "winston-aws-cloudwatch": "^3.0.0",
     "zod": "^3.23.8"
   }
 }

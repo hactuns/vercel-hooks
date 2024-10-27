@@ -1,4 +1,4 @@
-import { Collection, MongoClient } from 'mongodb';
+import { MongoClient } from 'mongodb';
 
 export class Mongo {
   private static client: MongoClient;

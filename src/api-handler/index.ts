@@ -1,6 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import type { Request, Response } from 'express';
-import withMongo from '../mongo/withMongo.js';
 
 export interface RequestContext<
   Req extends Request | VercelRequest = Request,
