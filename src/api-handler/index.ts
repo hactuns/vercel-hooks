@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import type { Request, Response } from 'express';
+import Logger from '../logger/logger.js';
 
 export interface RequestContext<
   Req extends Request | VercelRequest = Request,
@@ -38,6 +39,7 @@ export const handler =
     callback: HandlerCallback<HandlerType>
   ) =>
   (req: HandlerType[Method]['req'], res: HandlerType[Method]['res']) => {
+    Logger.info(`Method invoked at ${new Date().toISOString()}`);
     const method = req.method?.toUpperCase() as keyof typeof callback;
 
     if (typeof callback[method] !== 'function') {

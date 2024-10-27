@@ -1,4 +1,5 @@
 import { MongoClient } from 'mongodb';
+import Logger from '../logger/logger.js';
 
 export class Mongo {
   private static client: MongoClient;
@@ -14,11 +15,11 @@ export class Mongo {
   static async connect() {
     try {
       const client = await this.client.connect();
-      console.log(`[MONGO_INSTANCE]: connected at ${new Date().toISOString()}`);
+      Logger.info(`[MONGO_INSTANCE]: connected at ${new Date().toISOString()}`);
 
       return client;
     } catch (error) {
-      console.error('[MONGO_INSTANCE]: connection error', error);
+      Logger.error('[MONGO_INSTANCE]: connection error', error);
       throw new Error('Cannot connect to mongodb');
     }
   }
