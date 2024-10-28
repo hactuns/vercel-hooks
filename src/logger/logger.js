@@ -10,7 +10,13 @@ const Logger = createLogger({
   format: format.json(),
   transports: [
     new transports.Console({
-      format: format.combine(format.simple(), format.colorize({ all: true })),
+      format: format.combine(
+        format.metadata(),
+        format.printf((info) => {
+          return `[${new Date().toISOString()}] [${info.level.toUpperCase()}]: ${info.message} - ${JSON.stringify(info.metadata ?? {})}`;
+        }),
+        format.colorize({ all: true })
+      ),
     }),
     ...(String(process.env.NODE_ENV) !== 'dev'
       ? [
@@ -28,11 +34,13 @@ const Logger = createLogger({
               region: String(process.env.AWS_REGION),
             },
             formatLog: (item) =>
-              `[${String(item.level).toUpperCase()}]: ${item.message} ${JSON.stringify(item.meta)}`,
+              `[${String(item.level).toUpperCase()}]: ${item.message} - ${JSON.stringify(item.meta ?? item.metadata ?? {})}`,
           }),
         ]
       : []),
   ],
 });
+
+Logger.debug('Hello', { a: 12 });
 
 export default Logger;
