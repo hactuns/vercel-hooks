@@ -15,7 +15,7 @@ export class Mongo {
   static async connect() {
     try {
       const client = await this.client.connect();
-      Logger.info(`[MONGO_INSTANCE]: connected at ${new Date().toISOString()}`);
+      Logger.debug(`[MONGO_INSTANCE]: connected at ${new Date().toISOString()}`);
 
       return client;
     } catch (error) {

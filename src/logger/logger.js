@@ -1,17 +1,16 @@
+process.env.AWS_SDK_JS_SUPPRESS_MAINTENANCE_MODE_MESSAGE = '1';
+
 import { config, createLogger, format, transports } from 'winston';
 import CloudWatchTransport from 'winston-aws-cloudwatch';
 
 const currentDate = new Date();
-
 const Logger = createLogger({
   levels: config.syslog.levels,
-  level: 'info',
+  level: 'debug',
   format: format.json(),
   transports: [
     new transports.Console({
-      format: format.cli({
-        all: true,
-      }),
+      format: format.combine(format.simple(), format.colorize({ all: true })),
     }),
     ...(String(process.env.NODE_ENV) !== 'dev'
       ? [

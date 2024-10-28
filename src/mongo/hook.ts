@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb';
-import { Mongo } from './mongoClient.js';
+import { Mongo } from './client.js';
 import type { Response, Request } from 'express';
 import type { APIHandler, RequestContext } from '../api-handler/index.js';
 

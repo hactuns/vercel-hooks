@@ -1,2 +1,3 @@
-export { default as withMongo } from './withMongo.js';
-export { Mongo } from './mongoClient.js';
+export { default as withMongo } from './hook.js';
+export { Mongo } from './client.js';
+export type * from 'mongodb';
