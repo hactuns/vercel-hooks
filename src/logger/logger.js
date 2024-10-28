@@ -41,6 +41,4 @@ const Logger = createLogger({
   ],
 });
 
-Logger.debug('Hello', { a: 12 });
-
 export default Logger;
