@@ -1,3 +1,6 @@
-export { default as Logger } from './logger.js';
 import type winston from 'winston';
+import Logger from './logger.js';
+
 export type { winston };
+export { Logger };
+export default Logger;

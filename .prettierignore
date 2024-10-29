@@ -5,3 +5,5 @@ yarn-error.log
 .env
 build
 lib
+.vscode
+yarn.lock

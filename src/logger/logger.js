@@ -4,6 +4,7 @@ import { config, createLogger, format, transports } from 'winston';
 import CloudWatchTransport from 'winston-aws-cloudwatch';
 
 const currentDate = new Date();
+
 const Logger = createLogger({
   levels: config.syslog.levels,
   level: 'debug',
@@ -22,10 +23,14 @@ const Logger = createLogger({
       ? [
           new CloudWatchTransport({
             logGroupName: String(process.env.AWS_LOG_GROUP),
-            logStreamName: currentDate.getMonth() + '/' + currentDate.getFullYear(),
+            logStreamName: [
+              currentDate.getDate(),
+              currentDate.getMonth(),
+              currentDate.getFullYear(),
+            ].join('/'),
             createLogGroup: true,
             createLogStream: true,
-            submissionInterval: 2000,
+            submissionInterval: 1000,
             submissionRetryCount: 1,
             batchSize: 20,
             awsConfig: {
@@ -34,7 +39,7 @@ const Logger = createLogger({
               region: String(process.env.AWS_REGION),
             },
             formatLog: (item) =>
-              `[${String(item.level).toUpperCase()}]: ${item.message} - ${JSON.stringify(item.meta ?? item.metadata ?? {})}`,
+              `[${String(item.level).toUpperCase()}]: ${item.message} - ${JSON.stringify(item.meta ?? item.metadata ?? {}) || item.meta || item.metadata || ''}`,
           }),
         ]
       : []),
