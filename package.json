@@ -1,5 +1,5 @@
 {
-  "name": "serverless-hooks",
+  "name": "srvls-hook",
   "version": "1.5.0",
   "description": "Custom hooks for vercel/next serverless API",
   "keywords": [
@@ -9,14 +9,14 @@
     "api",
     "mongodb"
   ],
-  "homepage": "https://github.com/hactuns/serverless-hooks",
+  "homepage": "https://github.com/hactuns/srvls-hook",
   "bugs": {
-    "url": "https://github.com/hactuns/serverless-hooks/issues"
+    "url": "https://github.com/hactuns/srvls-hook/issues"
   },
   "author": "Hactuns<khactuans.tran@gmail.com>(https://hactuns.me)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hactuns/serverless-hooks.git"
+    "url": "git+https://github.com/hactuns/srvls-hook.git"
   },
   "files": [
     "lib"
