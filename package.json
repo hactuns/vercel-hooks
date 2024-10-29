@@ -1,21 +1,22 @@
 {
-  "name": "function-hooks",
-  "version": "1.4.6",
+  "name": "serverless-hooks",
+  "version": "1.5.0",
   "description": "Custom hooks for vercel/next serverless API",
   "keywords": [
     "vercel",
     "nextjs",
     "serverless",
-    "api"
+    "api",
+    "mongodb"
   ],
-  "homepage": "https://github.com/hactuns/vercel-hooks",
+  "homepage": "https://github.com/hactuns/serverless-hooks",
   "bugs": {
-    "url": "https://github.com/hactuns/vercel-hooks/issues"
+    "url": "https://github.com/hactuns/serverless-hooks/issues"
   },
-  "author": "Hactuns<khactuans.tran@gmail.com>(https://hactun.dev)",
+  "author": "Hactuns<khactuans.tran@gmail.com>(https://hactuns.me)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hactuns/vercel-hooks.git"
+    "url": "git+https://github.com/hactuns/serverless-hooks.git"
   },
   "files": [
     "lib"
