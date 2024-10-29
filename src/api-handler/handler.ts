@@ -4,7 +4,7 @@ import Logger from '../logger/logger.js';
 import debounce from '../utils/debounce.js';
 
 const voidFnc = () => undefined;
-const FNC_TIME_OUT = Number(process.env.FNC_TIME_OUT || 1_500);
+const FNC_TIME_OUT = Number(process.env.FNC_TIME_OUT || 2_000);
 
 export const handler =
   <Method extends HttpMethod, HandlerType extends Record<Method, HandlerFunction<Method>[Method]>>(

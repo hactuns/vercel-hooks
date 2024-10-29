@@ -1,6 +1,6 @@
 {
   "name": "function-hooks",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Custom hooks for vercel/next serverless API",
   "keywords": [
     "vercel",
@@ -46,9 +46,10 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@vercel/functions": "^1.4.2",
+    "aws-cloudwatch-log": "^0.1.6",
     "mongodb": "^6.9.0",
     "winston": "^3.15.0",
-    "winston-aws-cloudwatch": "^3.0.0",
-    "@vercel/functions": "^1.4.2"
+    "winston-transport": "^4.8.0"
   }
 }
