@@ -1,6 +1,6 @@
 {
   "name": "srvls-hook",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Custom hooks for vercel/next serverless API",
   "keywords": [
     "vercel",
@@ -33,7 +33,8 @@
   },
   "engines": {
     "npm": "please-use-yarn",
-    "yarn": ">= 1.0.0"
+    "yarn": ">= 1.0.0",
+    "node": "20"
   },
   "publishConfig": {
     "access": "public"
@@ -48,9 +49,8 @@
   },
   "dependencies": {
     "@vercel/functions": "^1.4.2",
-    "aws-cloudwatch-log": "^0.1.6",
+    "cloudwatch-transport": "^1.0.1",
     "mongodb": "^6.9.0",
-    "winston": "^3.15.0",
-    "winston-transport": "^4.8.0"
+    "winston": "^3.15.0"
   }
 }

@@ -1,5 +1,5 @@
 import { config, createLogger, format, transports } from 'winston';
-import CustomTransport from './custom-transport.js';
+import CloudwatchTransport from 'cloudwatch-transport';
 
 const currentDate = new Date();
 
@@ -17,16 +17,18 @@ const Logger = createLogger({
         format.colorize({ all: true })
       ),
     }),
-    new CustomTransport({
+    new CloudwatchTransport({
       logGroupName: String(process.env.AWS_LOG_GROUP),
       logStreamName: [
         currentDate.getDate(),
         currentDate.getMonth(),
         currentDate.getFullYear(),
       ].join('/'),
-      accessKeyId: String(process.env.AWS_KEY),
-      secretAccessKey: String(process.env.AWS_SECRET),
-      region: String(process.env.AWS_REGION),
+      awsCredentials: {
+        accessKeyId: String(process.env.AWS_KEY),
+        secretAccessKey: String(process.env.AWS_SECRET),
+        region: String(process.env.AWS_REGION),
+      },
       enabled: String(process.env.NODE_ENV) !== 'dev',
     }),
   ],
