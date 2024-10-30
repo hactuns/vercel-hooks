@@ -477,25 +477,10 @@ async@^3.2.3:
   resolved "https://registry.yarnpkg.com/async/-/async-3.2.6.tgz#1b0728e14929d51b85b449b7f06e27c1145e38ce"
   integrity sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA==
 
-aws-cloudwatch-log@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/aws-cloudwatch-log/-/aws-cloudwatch-log-0.1.6.tgz#f38187edee49f22527f87bdf603b75c459dbc706"
-  integrity sha512-njCOfMLUCUT9ATHs7gZZOeLhaZDsg3gbjIrUwIxHedCvG6k2LRRpqIG64HviwdYb75pT+xXR8QKa/BeyFJyNTg==
-  dependencies:
-    aws4 "^1.6.0"
-    axios "^0.26.1"
-
-aws4@^1.6.0:
+aws4@^1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.13.2.tgz#0aa167216965ac9474ccfa83892cfb6b3e1e52ef"
   integrity sha512-lHe62zvbTB5eEABUVi/AwVh0ZKY9rMMDhmm+eeyuuUQbQ3+J+fONVQOZyj+DdrvD4BY33uYniyRJ4UJIaSKAfw==
-
-axios@^0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
-  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
-  dependencies:
-    follow-redirects "^1.14.8"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -604,6 +589,15 @@ cliui@^7.0.2:
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
+
+cloudwatch-transport@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cloudwatch-transport/-/cloudwatch-transport-1.0.1.tgz#b7131b74f47e13fb4642f3049c57a8cd4362b387"
+  integrity sha512-NJRhibzKDJBqkf+8WbWRZyY1AfQZ8qj/72VAliKVyDm6X3ekQCWunHWSOmFZY8y+MW3BUgS6eCO0zxqQrv1LHQ==
+  dependencies:
+    aws4 "^1.13.2"
+    ky "^1.7.2"
+    winston-transport "^4.8.0"
 
 code-block-writer@^10.1.1:
   version "10.1.1"
@@ -951,11 +945,6 @@ fn.name@1.x.x:
   resolved "https://registry.yarnpkg.com/fn.name/-/fn.name-1.1.0.tgz#26cad8017967aea8731bc42961d04a3d5988accc"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
-follow-redirects@^1.14.8:
-  version "1.15.9"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.9.tgz#a604fa10e443bf98ca94228d9eebcc2e8a2c8ee1"
-  integrity sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==
-
 fs-minipass@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-2.1.0.tgz#7f5036fdbf12c63c169190cbe4199c852271f9fb"
@@ -1102,6 +1091,11 @@ kuler@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/kuler/-/kuler-2.0.0.tgz#e2c570a3800388fb44407e851531c1d670b061b3"
   integrity sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==
+
+ky@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-1.7.2.tgz#b97d9b997ba51ff1e152f0815d3d27b86513eb1c"
+  integrity sha512-OzIvbHKKDpi60TnF9t7UUVAF1B4mcqc02z5PIvrm08Wyb+yOcz63GRvEuVxNT18a9E1SrNouhB4W2NNLeD7Ykg==
 
 logform@^2.6.0, logform@^2.6.1:
   version "2.6.1"
