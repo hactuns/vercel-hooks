@@ -11,7 +11,10 @@ export const handler =
     callback: HandlerCallback<HandlerType>
   ) =>
   (req: HandlerType[Method]['req'], res: HandlerType[Method]['res']) => {
-    Logger.debug(`[FNC_INVOKED] At ${new Date().toISOString()}`);
+    const traceId = crypto.randomUUID();
+    req.headers['x-trace-id'] = traceId;
+
+    Logger.debug(`[FNC_INVOKED] At ${new Date().toISOString()}`, { traceId });
     const method = req.method?.toUpperCase() as keyof typeof callback;
 
     if (typeof callback[method] !== 'function') {
