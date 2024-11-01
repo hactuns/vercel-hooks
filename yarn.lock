@@ -590,10 +590,10 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
-cloudwatch-transport@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cloudwatch-transport/-/cloudwatch-transport-1.0.1.tgz#b7131b74f47e13fb4642f3049c57a8cd4362b387"
-  integrity sha512-NJRhibzKDJBqkf+8WbWRZyY1AfQZ8qj/72VAliKVyDm6X3ekQCWunHWSOmFZY8y+MW3BUgS6eCO0zxqQrv1LHQ==
+cloudwatch-transport@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/cloudwatch-transport/-/cloudwatch-transport-1.0.3.tgz#4aa214da7de4866218d1edf3b614cb65aa71517d"
+  integrity sha512-8QsRX8DmmDa3rXA10+UZmP/Y8gIQ2jmlwKax2KVrkI0Z1Kav0vbm7SwKsNVwLD0VS21SfvfnsKfuiRJMbrsgIQ==
   dependencies:
     aws4 "^1.13.2"
     ky "^1.7.2"
