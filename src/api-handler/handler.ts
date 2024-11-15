@@ -14,7 +14,6 @@ export const handler =
   (req: HandlerType[Method]['req'], res: HandlerType[Method]['res']) => {
     Logger.defaultMeta ??= {};
     Logger.defaultMeta.traceId = crypto.randomUUID();
-    Logger.debug(`[FNC_INVOKED] at ${new Date().toISOString()}`);
 
     const method = req.method?.toUpperCase() as keyof typeof callback;
 
